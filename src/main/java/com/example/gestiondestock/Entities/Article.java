@@ -7,15 +7,15 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
-@Data
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "article")
-@EqualsAndHashCode(callSuper = true)
 
-public class Article extends AbstractEntity{
+public class Article {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Integer id ;
     private String codeArticle;
 
     private String designation;
